@@ -44,7 +44,7 @@ class MultiSecExpandableListViewController: UIViewController {
     
         // MARK: Create list layout
         var layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        layoutConfig.headerMode = .firstItemInSection
+        layoutConfig.headerMode = .supplementary
         let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
 
         // MARK: Configure collection view
@@ -73,6 +73,15 @@ class MultiSecExpandableListViewController: UIViewController {
             // With this accessory, the header cell's children will expand / collapse when the header cell is tapped.
             let headerDisclosureOption = UICellAccessory.OutlineDisclosureOptions(style: .header)
             cell.accessories = [.outlineDisclosure(options:headerDisclosureOption)]
+        }
+        
+        let supplementaryHeaderRegistration = UICollectionView.SupplementaryRegistration<HideShowHeader>(supplementaryNib: HideShowHeader.getUINib(), elementKind: UICollectionView.elementKindSectionHeader) {
+            [unowned self] (headerView, elementKind, indexPath) in
+
+            headerView.label.text = "Supplementary Header \(indexPath.section)"
+            
+            let headerDisclosureOption = UICellAccessory.OutlineDisclosureOptions(style: .header)
+            headerView.accessories = [.outlineDisclosure(options:headerDisclosureOption)]
         }
 
         let symbolCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SFSymbolItem> {
@@ -106,6 +115,14 @@ class MultiSecExpandableListViewController: UIViewController {
                                                                         item: symbolItem)
                 return cell
             }
+        }
+        
+        dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
+            if kind == UICollectionView.elementKindSectionHeader {
+                let header = collectionView.dequeueConfiguredReusableSupplementary(using: supplementaryHeaderRegistration, for: indexPath)
+                return header
+            }
+            return nil
         }
         
         // MARK: Setup snapshots

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB476882C505FD2005268DE /* HideShowHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB476852C505FD2005268DE /* HideShowHeader.swift */; };
+		0DB476892C505FD2005268DE /* HideShowHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB476862C505FD2005268DE /* HideShowHeader.xib */; };
+		0DB4768A2C505FD2005268DE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB476872C505FD2005268DE /* UIView+Extensions.swift */; };
 		F92A29AD25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */; };
 		F92DF904254AFC5A001AEBA7 /* InteractiveHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */; };
 		F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DB476852C505FD2005268DE /* HideShowHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideShowHeader.swift; sourceTree = "<group>"; };
+		0DB476862C505FD2005268DE /* HideShowHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HideShowHeader.xib; sourceTree = "<group>"; };
+		0DB476872C505FD2005268DE /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadExpandableHeaderViewController.swift; sourceTree = "<group>"; };
 		F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveHeader.swift; sourceTree = "<group>"; };
 		F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentView.swift; sourceTree = "<group>"; };
@@ -131,8 +137,11 @@
 		F94C4FCE24F69E6500BF6544 /* Expandable List */ = {
 			isa = PBXGroup;
 			children = (
-				F97AD793250393C1006B9692 /* SingleSecExpandableListViewController.swift */,
+				0DB476852C505FD2005268DE /* HideShowHeader.swift */,
 				F9A404332502535600582192 /* MultiSecExpandableListViewController.swift */,
+				F97AD793250393C1006B9692 /* SingleSecExpandableListViewController.swift */,
+				0DB476872C505FD2005268DE /* UIView+Extensions.swift */,
+				0DB476862C505FD2005268DE /* HideShowHeader.xib */,
 			);
 			path = "Expandable List";
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 			files = (
 				F93EA01224E941F5007206EB /* SFSymbolNameContentView.xib in Resources */,
 				F940B01B24C3E25B000E6D17 /* LaunchScreen.storyboard in Resources */,
+				0DB476892C505FD2005268DE /* HideShowHeader.xib in Resources */,
 				F940B01824C3E25B000E6D17 /* Assets.xcassets in Resources */,
 				F940B01624C3E259000E6D17 /* Main.storyboard in Resources */,
 			);
@@ -286,6 +296,7 @@
 				F9D8B7EE253A8912009944FE /* DeclarativeHeaderFooterViewController.swift in Sources */,
 				F9FA37BC25486DB900421758 /* CustomHeaderFooterViewController.swift in Sources */,
 				F9F4F5AE259F503E00FB236B /* DatePickerReplicaViewController.swift in Sources */,
+				0DB476882C505FD2005268DE /* HideShowHeader.swift in Sources */,
 				F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */,
 				F940B01324C3E259000E6D17 /* BasicListViewController.swift in Sources */,
 				F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */,
@@ -293,6 +304,7 @@
 				F9F4F5B8259F517C00FB236B /* DatePickerContentConfiguration.swift in Sources */,
 				F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */,
 				F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */,
+				0DB4768A2C505FD2005268DE /* UIView+Extensions.swift in Sources */,
 				F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */,
 				F96AFF482524CE3D00F24248 /* ReloadValueTypeViewController.swift in Sources */,
 				F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */,
